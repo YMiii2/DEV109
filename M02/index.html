@@ -1,13 +1,52 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Module Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+    <title>HTML Table Example</title>
 </head>
 <body>
-  <table style='border: 2px solid black; width: 100px; height: 20%'>
 
-  <tr>
-    <td>Html
+<table>
+    <tr>
+        <td colspan="4">
+            <h1>HTML Table Example</h1>
+        </td>
+    </tr>
+    <tr>
+        <td><h2>Column 1</h2></td>
+        <td><h2>Column 2</h2></td>
+        <td><h2>Column 3</h2></td>
+        <td><h2>Column 4</h2></td>
+    </tr>
+    <tr>
+        <th>Instruction</th>
+        <th>Data 1</th>
+        <th>Data 2</th>
+        <th>Data 3</th>
+    </tr>
+    <tr>
+        <td colspan="4"><b>Merged Rows</b></td>
+    </tr>
+    
+</table>
+
 </body>
 </html>
