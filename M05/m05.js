@@ -1,22 +1,15 @@
-var table = 3;             // Unit of table
-var operator = 'addition'; // Type of calculation
-var i = 1;                 // Set counter to 1
-var msg = '';              // Message
 
-if (operator === 'addition') {
-  // Do addition
-  while (i < 11) {
-    msg += i + ' + ' + table + ' = ' + (i + table) + '<br />';
-    i++;
+var userNumber = prompt('Please enter a number from 0-10 to generate a multiplication table:', '5');
+var table = parseInt(userNumber, 10);
+if (!isNaN(table) && table >= 0 && table <= 10) {
+ var msg = '<h2>Multiplication Table</h2>';
+  msg += '<table>'; 
+ for (var i = 1; i <= 10; i++) {
+    msg += '<tr><td>' + i + ' x ' + table + ' = ' + (i * table) + '</td></tr>';
   }
+  msg += '</table>'; 
 } else {
-  // Do multiplication
-  while (i < 11) {
-    msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
-    i++;
-  }
+  msg = 'Please refresh the page and enter a valid number.';
 }
-
-// Write the message into the page
 var el = document.getElementById('blackboard');
 el.innerHTML = msg;
